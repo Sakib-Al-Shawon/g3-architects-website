@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+.text-gray {
+  color: #727272;
+}
 .primary-btn {
   border-radius: 8px;
   padding: 20px 25px;
@@ -14,6 +17,12 @@
   cursor: pointer;
   border: none;
   margin: 10px 0;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #131313;
 }
 
 /* Header Style */
@@ -26,12 +35,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #131313;
 }
 
 nav > ul {
@@ -52,7 +55,7 @@ nav li a {
 .banner-content {
   max-width: 800px;
   text-align: center;
-  margin: 0 auto;
+  margin: 70px auto;
 }
 
 .banner-title {
@@ -61,38 +64,12 @@ nav li a {
   color: #131313;
 }
 
-.banner-description {
-  color: #727272;
-}
-
 .banner img {
   margin-top: 30px;
   width: 100%;
 }
 
-/* responsive style for small device*/
-
-@media screen and (max-width: 576px) {
-  header {
-    padding: 20px;
-  }
-  nav {
-    flex-direction: column;
-  }
-}
-
-/* responsive style for tablet*/
-
-@media screen and (min-width: 576px) and (max-width: 960px) {
-  header {
-    padding: 50px;
-  }
-  nav {
-    flex-direction: column;
-  }
-}
-
-/* main styles */
+/* main section styles */
 main {
   max-width: 1440px;
   margin: 0 auto;
@@ -126,4 +103,138 @@ main {
 .t-feature {
   color: #ff900e;
   font-weight: 700;
+}
+
+/* feature section styles */
+.features {
+  margin-top: 130px;
+  display: flex;
+  gap: 100px;
+}
+
+.features .section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+.feature-content .card {
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+
+.feature-img img {
+  height: 70%;
+  margin-left: 50px;
+}
+.badges {
+  border-radius: 8px;
+  background-color: #ff900e;
+  color: #fff;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+
+.badges h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.badges p {
+  font-size: 1.5rem;
+}
+/* facts section */
+.facts-card {
+  display: flex;
+  justify-content: space-around;
+}
+.facts-card .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px;
+}
+
+.facts-card .card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 5px;
+}
+.facts-card .card-stats {
+  font-size: 2.8rem;
+  color: #424242;
+  margin: 10px 0;
+}
+
+/* sponsor styles */
+.sponsors {
+  text-align: center;
+}
+
+.sponsors-img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  gap: 40px;
+
+  .sponsors-img img {
+    width: 165px;
+  }
+}
+
+/* ---------------------------------------------
+---------responsive style for small device-----
+------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+  header {
+    padding: 20px;
+  }
+  nav,
+  .teams-container,
+  .features,
+  .sponsors-img {
+    flex-direction: column;
+  }
+  .feature-img img {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .badges {
+    max-width: 300;
+  }
+  .img-container {
+    grid-template-columns: 1fr;
+  }
+
+  .team-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .facts-card {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
+
+/* responsive style for tablet*/
+
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  header {
+    padding: 50px;
+  }
+  nav,
+  .features,
+  .teams-container,
+  .sponsors-img {
+    flex-direction: column;
+  }
 }
